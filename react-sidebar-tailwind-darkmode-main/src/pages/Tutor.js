@@ -4,6 +4,17 @@ import { useState } from 'react';
 // link demo https://tailwindcomponents.com/component/table-responsive-with-filters
 const Tutor = () => {
 
+
+    const arraySubject = [
+        {
+            id:1,
+            name:"Math"
+        },
+        {
+            id:2,
+            name:"History"
+        }
+    ]
     const [isAddTutor, setIsAddTutor] = useState(false);
     const showModal = () => {
         setIsAddTutor(true);
@@ -20,7 +31,7 @@ const Tutor = () => {
         <p>Some contents...</p>
         <p>Some contents...</p>
       </Modal> */}
-      <AddTutor isShow = {isAddTutor} close= {handleCancel}/>
+      <AddTutor arraySubject = {arraySubject} isShow = {isAddTutor} close= {handleCancel}/>
         <div class="container mx-auto px-4 sm:px-8">
             <div class="py-8">
                 <div>

@@ -13,6 +13,9 @@ export function AddTutor(props) {
     const dateFormat = 'YYYY/MM/DD';
     const [imageUrl, setImageUrl] = useState('https://www.pixelstalk.net/wp-content/uploads/2016/10/Download-Beautiful-Girl-Picture.jpg');
 
+
+    const arraySubject = props.arraySubject;
+    console.log({arraySubject:arraySubject});
     const handleOk = () => {
 
         // setIsShow(false)
