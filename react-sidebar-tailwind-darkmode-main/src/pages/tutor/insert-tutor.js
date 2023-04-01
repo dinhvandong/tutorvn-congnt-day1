@@ -1,50 +1,22 @@
-
-import { DatePicker, Modal, Radio, Upload } from 'antd';
-import TextArea from 'antd/es/input/TextArea';
-import { GrGroup } from 'react-icons/gr';
-import { PlusOutlined } from '@ant-design/icons';
-import {message } from 'antd';
+import { Radio, DatePicker, Upload } from 'antd';
 import dayjs from 'dayjs';
 import { useState } from 'react';
-import Background from './../../components/Background';
+import TextArea from 'antd/es/input/TextArea';
 
-export function AddTutor(props) {
-
-    // [isShow, setIsShow] = useState(false);
+const InsertTutor = () => {
     const dateFormat = 'YYYY/MM/DD';
-    const [imageUrl, setImageUrl] = useState('https://www.pixelstalk.net/wp-content/uploads/2016/10/Download-Beautiful-Girl-Picture.jpg');
+
+    return <body class="antialiased font-sans bg-gray-200">
+        <div class="container mx-auto px-4 sm:px-8">
+        <div class="py-8">
+                <div>
+                    <h2 class="text-2xl font-semibold leading-tight">Users Insert</h2>
+                </div>
 
 
-    const arraySubject = props.arraySubject;
-    console.log({arraySubject:arraySubject});
-    const handleOk = () => {
+                </div>
 
-        // setIsShow(false)
-        props.close()
-
-    }
-
-    const handleCancel = () => {
-        // setIsShow(false)
-        props.close()
-
-    }
-   
-
-    return <div>
-        <Modal centered={true} autoFocus={true}
-            open={props.isShow}
-            title="Add Tutor"
-            onOk={handleOk}
-            okType={'default'}
-            //okType={'primary'}
-            onCancel={handleCancel}
-
-            okButtonProps={{ autoFocus: true }}
-            // cancelButtonProps={{ disabled: false }}
-            >
-
-    <Upload
+                <Upload
             name="avatar"
             listType="picture-circle"
             className="avatar-uploader"
@@ -97,7 +69,20 @@ export function AddTutor(props) {
             <br />
             <br />
             <TextArea rows={4} placeholder="Description your experients" maxLength={4} />
+            <br />
+            <br />
+            <TextArea placeholder="Subject" autoSize />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
 
-        </Modal>
-    </div>
+    </body>
+
+
 }
+
+export default InsertTutor
